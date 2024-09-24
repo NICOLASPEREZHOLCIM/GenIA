@@ -81,7 +81,7 @@ def get_bedrock_client(
 
 
 def get_bedrock_clients():
-    os.environ["AWS_PROFILE"] = "genaidev"
+    os.environ["AWS_PROFILE"] = "default"
     bedrock_runtime_client = get_bedrock_client(assumed_role = os.environ.get("BEDROCK_ASSUME_ROLE", None),
                                                 region = os.environ.get("AWS_DEFAULT_REGION", None))
     bedrock_control_client = get_bedrock_client(assumed_role = os.environ.get("BEDROCK_ASSUME_ROLE", None),
